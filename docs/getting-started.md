@@ -48,4 +48,4 @@
 
 此文档基于 [VitePress](https://github.com/vuejs/vitepress) 搭建而成，部署于 `本人（方鼎立）` 私人服务器下。
 
-文档编写参考 [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) 、[Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)、[阿里前端规范2021](https://developer.aliyun.com/article/850913)、[Baidu EFE team 前端开发规范大全](https://github.com/ecomfe/spec) 、[京东凹凸实验室前端代码规范](https://guide.aotu.io/index.html) 等多个热门前端开源规范并以个人多个项目总结为基础制成。
+文档编写参考 [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) 、[Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)、[阿里前端规范2021](https://developer.aliyun.com/article/850913)、[Baidu EFE team 前端开发规范大全](https://github.com/ecomfe/spec) 、[京东JDC前端代码规范](https://jdf2e.github.io/jdc_fe_guide/)、[京东凹凸实验室前端代码规范](https://guide.aotu.io/index.html) 等多个热门前端开源规范并以个人多个项目总结为基础制成。
