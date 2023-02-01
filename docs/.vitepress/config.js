@@ -14,6 +14,15 @@ export default defineConfig({
           { text: '命名规范', link: '/name-standard' },
         ],
       },
+      {
+        text: '编码规范',
+        items: [
+          { text: '写在前面', link: '/code-standard/getting-started' },
+          { text: 'HTML规范', link: '/code-standard/HTML' },
+          { text: 'CSS规范', link: '/code-standard/CSS' },
+          { text: 'JavaScript规范', link: '/code-standard/JavaScript' },
+        ],
+      },
     ],
   },
 })
