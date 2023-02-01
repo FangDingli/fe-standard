@@ -259,3 +259,50 @@ const str = 'a' + 'b' + test
 // good
 const str = `ab${test}`
 ```
+
+#### 对象与prototype
+
+- 团队成员严禁修改内置对象原型链上自带的方法，如 `Object`, `Array`
+
+- 如需要往对象的 `prototype` 上新增属性，请使用 `Class` ，切忌直接操作 `prototype`
+
+```javascript
+// bad
+function Queue (contents = []) {
+  this._queue = [..contents]
+}
+Queue.prototype.pop = function () {
+  const value = this._queue[0]
+  this._queue.splice(0, 1)
+  return value
+}
+
+// good
+class Queue {
+  constructor (contents = []) {
+    this._queue = [...contents]
+  }
+
+  pop () {
+    const value = this._queue[0]
+    this._queue.splice(0, 1)
+    return value
+  }
+}
+```
+
+#### console.log
+
+开发环境中过多的 `console.log` 会让控制台变的杂乱无章，虽然可以给每个 `console.log` 添加特定的字符串用于筛选，但希望团队成员能在开发完页面后或者在对应的 `console.log` 完成对应任务后手动清除
+
+生产环境中清除 `console.log` 在一定程度上有助于减小代码体积以及提高页面性能，以下为生产环境清除 `console.log` 的自动化工具
+
+- webpack: [这些操作删除console.log代码，你都知道吗 - 掘金](https://juejin.cn/post/6992749075326042126) 
+
+- vite: [Build Options | Vite](https://vitejs.dev/config/build-options.html#build-minify) 并设置 `type` 为 `terser` ， [API Reference · terser](https://terser.org/docs/api-reference#minify-options) 
+
+
+
+[千万别让 console.log 上生产！用 Performance 和 Memory 告诉你为什么 - 掘金](https://juejin.cn/post/7185128318235541563) 
+
+[console.log 一定会导致内存泄漏？不打开 devtools 就不会 - 掘金](https://juejin.cn/post/7185501830040944698) 
