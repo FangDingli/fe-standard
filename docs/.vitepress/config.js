@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: '/fe-standard/',
   title: '前端代码规范',
   description: '浙江亿点通研发部 - 前端组开发规范',
   lastUpdated: true,
